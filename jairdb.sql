@@ -33,6 +33,14 @@ CREATE TABLE `departamento` (
   `descricao` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Extraindo dados da tabela `departamento`
+--
+
+INSERT INTO `departamento` (`codigo`, `descricao`) VALUES
+(1, 'ADM'),
+(2, 'RH');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +53,14 @@ CREATE TABLE `dependentes` (
   `nome` varchar(255) NOT NULL,
   `data_nasc` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `dependentes`
+--
+
+INSERT INTO `dependentes` (`codigo`, `cod_funcionario`, `nome`, `data_nasc`) VALUES
+(1, 1, 'jair', '2000-08-22'),
+(2, 2, 'fernanda', '2005-09-13');
 
 -- --------------------------------------------------------
 
@@ -59,6 +75,14 @@ CREATE TABLE `funcionario` (
   `telefone` varchar(15) DEFAULT NULL,
   `cod_departamento` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `funcionario`
+--
+
+INSERT INTO `funcionario` (`codigo`, `nome`, `endereco`, `telefone`, `cod_departamento`) VALUES
+(1, 'jair', 'palmares', '81-945545545', 1),
+(2, 'fernanda', 'palmares', '81-941814818', 2);
 
 --
 -- Índices para tabelas despejadas
