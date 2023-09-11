@@ -6,7 +6,6 @@
 -- Tempo de geração: 06-Set-2023 às 13:19
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.0.25
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -26,7 +25,9 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `departamento`
 --
+CREATE DATABASE jairdb;
 
+use jairdb;
 CREATE TABLE `departamento` (
   `codigo` int(11) NOT NULL,
   `descricao` varchar(255) NOT NULL
